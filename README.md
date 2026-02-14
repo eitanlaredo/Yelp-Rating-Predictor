@@ -1,28 +1,49 @@
-# Yelp_5220_final_project
-Comparing machine learning models accuracy for star rating classification of Yelp Reviews         
-Project Report: [Report](https://www.overleaf.com/6691312184zdsnyfvqtdtn#51b698)
+# Yelp Review Sentiment Classification
 
-Yelp Review Sentiment Classification
+Comparing machine learning models for star rating classification of Yelp reviews.
 
-Files:
-Preprocessing: Handles all data cleaning and preprocessing
-Models: Handles all modeling with reported accuracies
+## Overview
 
-This project focuses on sentiment analysis of Yelp reviews, aiming to classify them based on polarity (positive or negative). Yelp, a popular platform for discovering local businesses, provides a wealth of customer feedback that can offer valuable insights for business owners and potential customers alike.
+This project performs sentiment analysis on Yelp reviews, classifying them by polarity (positive/negative). Using a dataset of over 7 million Yelp reviews, we compare several ML approaches to determine which most accurately predicts star ratings from review text alone.
 
-The primary goal is to identify the sentiment of Yelp reviews and extract key features that contribute to either positive or negative sentiments. This analysis will help restaurant owners, new businesses, and existing merchants gain a better understanding of customer experiences and improve their offerings.
+## Dataset
 
-Objectives Sentiment Classification: Use machine learning models to determine whether Yelp reviews reflect positive or negative sentiment. Model Comparison: Compare accuracy of models and summarize their effiacy via variosu ML scores and metrics
+The [Yelp Open Dataset](https://www.yelp.com/dataset) contains 7M+ reviews including review IDs, restaurants, food categories, funny/cool/useful tags, and 1–5 star ratings. For this project, we stripped accessory features and used only the written review text and star ratings.
 
-Future work: 
-* Keyword Extraction: Identify words and features that contribute to sentiment polarity using techniques like word clouds and regression analysis. Emplying these words to better enhance data preprocessing and intermediary data curation to improve the accuracy of the model.
-* Applying machine learning to sentiment analysis lexicons to change polarity weights of words based on training with the labeled data.
-        
+## Models
 
-Data Yelp Dataset: The dataset contains over 7 million records of yelp reviews, including the review_ids, restraunts, food category, funny/cool/useful tags, and 5 star ratings. To make the project more straightforward, accessory features were trimmed, leaving just the written yelp reviews and their star ratings.
+| Model | Description |
+|-------|-------------|
+| **Naive Bayes** | Probabilistic baseline classifier |
+| **Random Forest** | Ensemble tree-based classifier |
+| **CNN** | Convolutional Neural Network for text classification |
+| **VADER & TextBlob** | Lexicon-based sentiment analysis |
 
-Models explored: Naive Bayes, Random Forest, Convolutional Neural Networks, Sentiment Analysis Lexicons using VADER and TextBlob
+## Project Structure
 
-Tools & Libraries The analysis was carried out in a Jupyter Notebook using Python, with the following libraries:
+```
+├── CNN.ipynb                # CNN model training and evaluation
+├── In Progress CNN.ipynb    # CNN development notebook
+├── RandomForestModel.ipynb  # Random Forest and Naive Bayes models
+├── data_loader.py           # Data cleaning and preprocessing
+├── imports.py               # Shared imports across notebooks
+```
 
-Pandas for data manipulation PyTorch and Scikit-learn for machine learning models NLTK for natural language processing tasks matplotlib for visualization
+## Tools & Libraries
+
+- **Pandas** — data manipulation
+- **PyTorch** — CNN implementation
+- **Scikit-learn** — traditional ML models and evaluation metrics
+- **NLTK** — text preprocessing and NLP utilities
+- **Matplotlib** — visualization
+
+## Future Work
+
+- **Keyword extraction** — Identify words driving sentiment polarity via word clouds and regression analysis, then use those features to improve preprocessing and model accuracy.
+- **Lexicon fine-tuning** — Apply ML to adjust sentiment lexicon polarity weights using the labeled training data.
+
+## Contributors
+
+- [eitanlaredo](https://github.com/eitanlaredo)
+- [CowAvenge](https://github.com/CowAvenge) 
+- [nadia424](https://github.com/nadia424)
