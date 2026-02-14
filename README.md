@@ -23,7 +23,6 @@ The [Yelp Open Dataset](https://www.yelp.com/dataset) contains 7M+ reviews inclu
 
 ```
 ├── CNN.ipynb                # CNN model training and evaluation
-├── In Progress CNN.ipynb    # CNN development notebook
 ├── RandomForestModel.ipynb  # Random Forest and Naive Bayes models
 ├── data_loader.py           # Data cleaning and preprocessing
 ├── imports.py               # Shared imports across notebooks
